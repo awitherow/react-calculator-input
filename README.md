@@ -1,46 +1,57 @@
-﻿
-# React Calculator Input
+﻿# React Calculator Input
+
+## AUSTIN NOTES
+
+### TODO
+
+- http://blog.wolksoftware.com/contributing-to-definitelytyped
+
+## PREV NOTES
 
 A simple React component that renders a numeric input field with a calculator that pops up on focus.
 
 [DEMO](https://silviajoy.github.io/react-calculator-input/)
 
 ## Set Up
+
 Install the package
 
     npm install react-calculator-input
+
 and import the css in your application
 
     import '[path_to_node_modules_folder]/react-calculator-input/lib/index.scss'
+
 or copy it in your own file, you can find the [scss there](https://github.com/silviajoy/numeric-input-component/blob/master/lib/index.scss).
 
 ## Usage
 
-Import the component 
+Import the component
 
     import NumericInput from 'react-calculator-input'
+
 To use it, you need to set the `id` prop, which will be the `id` attribute of the `input`tag in the `html` (and the `for` attribute of the `label` tag, if any).
 
 Other props you can play with:
 
-| Prop | Prop Type | Required | Default |
-| ------ | ------ |------ | ----- |
-| `id` | String | Required | 
-| `initialValue` | number |  | 0 
-| `name` | String |  |
-| `className` | String |  |
-| `label` | String |  | 
-| `labelPosition` | ["bottom", "top"] |  | "top"
-| `labelClassName` | String |  |
-| `calculatorBackground` | String |  | "#666"
-| `calculatorKeyColor` | String |  | "#ccc"
-| `format` | ["float", "integer"] |  | "float"
+| Prop                   | Prop Type            | Required | Default |
+| ---------------------- | -------------------- | -------- | ------- |
+| `id`                   | String               | Required |
+| `initialValue`         | number               |          | 0       |
+| `name`                 | String               |          |
+| `className`            | String               |          |
+| `label`                | String               |          |
+| `labelPosition`        | ["bottom", "top"]    |          | "top"   |
+| `labelClassName`       | String               |          |
+| `calculatorBackground` | String               |          | "#666"  |
+| `calculatorKeyColor`   | String               |          | "#ccc"  |
+| `format`               | ["float", "integer"] |          | "float" |
 
 \
-**id**  \
+**id** \
 The value of this prop will be the `id` attribute of the `input` tag and of the `for` attribute of the `label` tag, if any.
 
-**initialValue**  \
+**initialValue** \
 The initial `value` attribute of the `input` tag. Default is 0.
 
 **name**
@@ -51,7 +62,7 @@ The value of this prop will be the `name` attribute of the `input` tag.
 The value of this prop will be the `class` attribute of the `input` tag.
 
 **label**\
-The value of this prop will be the content of the `label` tag. 
+The value of this prop will be the content of the `label` tag.
 If you want an empty label, just type in the empty string `""` .
 
 **labelPosition**\
@@ -72,10 +83,10 @@ You should pass a `css` color property to this prop either. In this case you dec
 **format**\
 With this prop you decide if the input value will accept `"float"`ing point numbers or `"integer"`s only. Default value is `"float"`.
 
-
 ### Example
 
     <NumericInput id="myinput" label="Age" name="age"/>
+
 will result in the following html:
 
     <div class="numericinput">
@@ -83,4 +94,3 @@ will result in the following html:
         <input id="myinput" type="number" name="age" value="0">
         <!-- calculator stuff -->
     </div>
-
